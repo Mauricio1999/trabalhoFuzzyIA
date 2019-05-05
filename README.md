@@ -11,6 +11,9 @@ Lucas Cordeiro de Souza e Mauricio Demonti Amorim
 <p align="justify">
     Neste relatório será apresentado o detalhamento de implementação de um Sistema Especialista Fuzzy utilizando a ferramenta FuzzyClips, com a finalidade de calcular o ganho (em reais) diário de um funcionário fabricante de peças eletrônicas, considerando como variáveis auxiliares o tempo estimado e a quantidade produzida. 
 </p>
+<p align="justify">
+    As variáveis linguísticas de entrada e saída são mostradas na Tabela 1:
+</p>
 
 <table align="center">
   <thead>
