@@ -61,3 +61,24 @@ Lucas Cordeiro de Souza e Mauricio Demonti Amorim
 <h6>
 Tabela 1. Variáveis linguísticas para calcular o ganho diário de monetização.
 </h6>
+<p align="justify">
+    Na primeira coluna da tabela estão descritos os valores possíveis de produção de peças, enquanto na primeira linha tempos as possíveis variáveis de tempo (Pouco, médio e muito). Já as demais colunas estão descritos os resultados dos ganhos por produção em seu determinado tempo.
+</p>
+
+<h4>
+2. Implementação e Testes 
+</h4>
+
+<p align="justify">
+    Para cada variável linguística foi definido um template. No caso do template Tempo, utilizou-se duas funções pré-definidas (z) no início e (s) para final e uma função trapezoide de três pontos: 
+</p>
+
+'''
+(deftemplate tempo
+0 8 tempo_producao_horas
+  (    (pouco (z 0 4))
+    (medio (2 0)(4 1)(6 0))
+    (muito (s 5 8))
+  )
+)
+'''
