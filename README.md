@@ -1,5 +1,5 @@
 <h2 align="justify">
-Implementação de um Sistema Especialista Fuzzy para Calcular Ganho de um Funcionário por Produção e Tempo na Fabricação de Peças Eletrônicas 
+Implementação de um Sistema Especialista Fuzzy para Calcular o Ganho de um Funcionário por Produção e Tempo na Fabricação de Peças Eletrônicas 
 </h2>
 <h3>
 Lucas Cordeiro de Souza e Mauricio Demonti Amorim
@@ -87,7 +87,7 @@ Lucas Cordeiro de Souza e Mauricio Demonti Amorim
 </p>
 
 ![Imagem 1](https://github.com/Mauricio1999/trabalhoFuzzyIA/blob/master/img/plot%20tempo.jpg)
-<h6>Figura 1. Plotagem dos Valores numéricos possíveis para o Tempo de trabalho</h6>
+<h6>Figura 1. Plotagem dos Valores numéricos possíveis para o tempo de trabalho</h6>
 
 <p align="justify">
     A Figura 2 ilustra agora os valores numéricos possíveis para a quantidade de produção de peças, sendo utilizadas duas funções pré-definidas (z e s), e três trapezoides:
@@ -105,6 +105,101 @@ Lucas Cordeiro de Souza e Mauricio Demonti Amorim
   )
 )
 ```
+![Imagem 2](https://github.com/Mauricio1999/trabalhoFuzzyIA/blob/master/img/plot%20producao.jpg)
+<h6>Figura 2. Plotagem dos Valores numéricos possíveis para a quantidade de produção</h6>
+
+<p align="justify">
+    A Figura 3 ilustra os possíveis ganhos diários relacionados a produção e o tempo de trabalho,  sendo composta por duas funções pré-definidas (z e s) e um trapezoide:
+</p>
+
+```
+(deftemplate ganho
+0 300 ganho_producao/tempo
+  (
+    (baixo (z 0 110))
+    (medio (90 0)(110 1)(190 1)(210 0))
+    (alto (s 190 300))
+  )
+)
+```
+![Imagem 3](https://github.com/Mauricio1999/trabalhoFuzzyIA/blob/master/img/plot%20ganho.jpg)
+<h6>Figura 3 Plotagem dos Valores numéricos possíveis para o ganho diário.</h6>
+
+<p align="justify">
+    A definição do resultado de Ganho é gerada por três regras distintas (defrule baixo, defrule medio e defrule alto), uma para cada variável linguística. Foi utilizada a declaração da salience para que as regras fossem executadas antes da regra de defuzzificação.
+</p>
+```
+(defrule baixo
+  (declare (salience 10))
+  (or (and (producao muito-baixa) (tempo pouco))
+      (and (producao muito-baixa) (tempo medio))
+      (and (producao muito-baixa) (tempo muito))
+      (and (producao baixa) (tempo medio))
+      (and (producao baixa) (tempo muito))
+      (and (producao media) (tempo muito))
+)
+=>
+  (assert (ganho baixo))
+)
+ 
+(defrule medio
+  (declare (salience 10))
+  (or (and (producao baixa) (tempo pouco))
+      (and (producao media) (tempo medio))
+      (and (producao alta) (tempo muito))
+)
+=>
+  (assert (ganho medio))
+)
+ 
+(defrule alto
+  (declare (salience 10))
+  (or (and (producao media) (tempo pouco))
+      (and (producao alta) (tempo pouco))
+      (and (producao alta) (tempo medio))
+      (and (producao muito-alta) (tempo pouco))
+      (and (producao muito-alta) (tempo medio))
+      (and (producao muito-alta) (tempo muito))
+)
+=>
+  (assert (ganho alto))
+)
+```
+<p align="justify">
+   Foi utilizado o procedimento de defuzzificação para se obtermos um resultado. Para a defuzzificação, é criada uma variável global e uma regra que também faz a plotagem do valor numérico encontrado. A regra defuzifica foi declarada com salience 0, forçando-a a ser executada após as demais regras.
+</p>
+```
+(defglobal
+?*g_resultado* = 0
+)
+(defrule defuzifica
+  (declare (salience 0))
+  ?v_tmp <- (ganho ?)
+=>
+  (bind ?*g_resultado* (moment-defuzzify ?v_tmp))
+  (plot-fuzzy-value t "*" nil nil ?v_tmp)
+  (retract ?v_tmp)
+  (printout t "Ganho: ")
+  (printout t ?*g_resultado* crlf)
+)
+```
+<p align="justify">
+   Para testar as regras apresentadas, geramos os deffacts, obtendo valores numéricos como resultado para as regras e fatos apresentados, devido a defuzificação citada acima.
+</p>
+
+Deffacts - 1
+
+```
+(deffacts producao/tempo
+  (producao muito-alta)
+  (tempo pouco)
+)
+```
+A figura 4 ilustra o resultado obtido a partir dos fatos citados acima.
+
+
+
+
 
 
 
