@@ -216,6 +216,9 @@ Deffacts - 2
 <h4>3. Conclusão</h4>
 
 <p align="justify">
-   Nos testes apresentados verificamos que implementação de um Sistema Especialista Fuzzy em empresa pode ser muito importante. Com regras e templates bem detalhados podemos ter uma ferramenta capaz de emitir diagnósticos precisos sobre a situação operativa. Como vimos, o sistema trabalha com grandes variedades de entradas, vagas e incertas, as quais podem ser traduzidas para valores reais, onde resulta no valor mais preciso possível. 
+   Nos testes apresentados verificamos que implementação de um Sistema Especialista Fuzzy em empresa pode ser muito importante. Com regras e templates bem detalhados podemos ter uma ferramenta capaz de emitir diagnósticos precisos sobre a situação operativa. Como vimos, o sistema trabalha com grandes variedades de entradas, vagas e incertas, as quais podem ser traduzidas para valores reais, onde resulta no valor mais preciso possível.
+</p>
+<p align="justify">
 	Um sistema como esse poderia ser muito bem aplicado em qualquer área de produção ou até mesmo adaptado para outros fatores do cotidiano.
 </p>
+
