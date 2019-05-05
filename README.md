@@ -73,7 +73,7 @@ Tabela 1. Variáveis linguísticas para calcular o ganho diário de monetizaçã
     Para cada variável linguística foi definido um template. No caso do template Tempo, utilizou-se duas funções pré-definidas (z) no início e (s) para final e uma função trapezoide de três pontos: 
 </p>
 
-'''
+```
 (deftemplate tempo
 0 8 tempo_producao_horas
   (    (pouco (z 0 4))
@@ -81,4 +81,4 @@ Tabela 1. Variáveis linguísticas para calcular o ganho diário de monetizaçã
     (muito (s 5 8))
   )
 )
-'''
+```
