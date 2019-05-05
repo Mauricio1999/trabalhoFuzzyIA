@@ -10,8 +10,7 @@
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th colspan='3'TEMPO</th>
+      <th colspan='3'>TEMPO</th>
     </tr>
     <tr>
       <th>PRODUÇÃO</th>
