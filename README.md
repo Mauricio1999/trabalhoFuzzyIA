@@ -174,6 +174,7 @@ Lucas Cordeiro de Souza e Mauricio Demonti Amorim
 (defglobal
 ?*g_resultado* = 0
 )
+
 (defrule defuzifica
   (declare (salience 0))
   ?v_tmp <- (ganho ?)
@@ -198,6 +199,10 @@ Deffacts - 1
 )
 ```
 A figura 4 ilustra o resultado obtido a partir dos fatos citados acima.
+![Imagem 4](https://github.com/Mauricio1999/trabalhoFuzzyIA/blob/master/img/muito-alta%20pouco.jpg "muito alta/pouco tempo")
+<h6 align="justify">Figura 4, plotagem do resultado dos fatos apresentados acima (Deffacts - 1)
+Ganho de uma produção muito alta em pouco tempo.</h6>
+
 
 
 
