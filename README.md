@@ -128,6 +128,7 @@ Lucas Cordeiro de Souza e Mauricio Demonti Amorim
 <p align="justify">
     A definição do resultado de Ganho é gerada por três regras distintas (defrule baixo, defrule medio e defrule alto), uma para cada variável linguística. Foi utilizada a declaração da salience para que as regras fossem executadas antes da regra de defuzzificação.
 </p>
+
 ```
 (defrule baixo
   (declare (salience 10))
@@ -168,6 +169,7 @@ Lucas Cordeiro de Souza e Mauricio Demonti Amorim
 <p align="justify">
    Foi utilizado o procedimento de defuzzificação para se obtermos um resultado. Para a defuzzificação, é criada uma variável global e uma regra que também faz a plotagem do valor numérico encontrado. A regra defuzifica foi declarada com salience 0, forçando-a a ser executada após as demais regras.
 </p>
+
 ```
 (defglobal
 ?*g_resultado* = 0
