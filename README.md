@@ -7,7 +7,7 @@
 	Neste relatório será apresentado o detalhamento de implementação de um Sistema Especialista Fuzzy utilizando a ferramenta FuzzyClips, com a finalidade de calcular o ganho(R$) diário de um funcionário fabricante de peças eletrônicas, considerando como variáveis auxiliares o tempo estimado e a quantidade produzida. 
 </p>
 
-<table>
+<table align="center">
   <thead>
     <tr>
       <th></th>
