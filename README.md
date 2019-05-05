@@ -58,9 +58,7 @@ Lucas Cordeiro de Souza e Mauricio Demonti Amorim
     </tr>
   </tbody>
 </table>
-<h6>
-Tabela 1. Variáveis linguísticas para calcular o ganho diário de monetização.
-</h6>
+<h6>Tabela 1. Variáveis linguísticas para calcular o ganho diário de monetização.</h6>
 <p align="justify">
     Na primeira coluna da tabela estão descritos os valores possíveis de produção de peças, enquanto na primeira linha tempos as possíveis variáveis de tempo (Pouco, médio e muito). Já as demais colunas estão descritos os resultados dos ganhos por produção em seu determinado tempo.
 </p>
@@ -76,7 +74,8 @@ Tabela 1. Variáveis linguísticas para calcular o ganho diário de monetizaçã
 ```
 (deftemplate tempo
 0 8 tempo_producao_horas
-  ((pouco (z 0 4))
+  (
+    (pouco (z 0 4))
     (medio (2 0)(4 1)(6 0))
     (muito (s 5 8))
   )
@@ -88,3 +87,26 @@ Tabela 1. Variáveis linguísticas para calcular o ganho diário de monetizaçã
 </p>
 
 ![Imagem 1](https://github.com/Mauricio1999/trabalhoFuzzyIA/blob/master/img/plot%20tempo.jpg)
+<h6>Figura 1. Plotagem dos Valores numéricos possíveis para o Tempo de trabalho</h6>
+
+<p align="justify">
+    A Figura 2 ilustra agora os valores numéricos possíveis para a quantidade de produção de peças, sendo utilizadas duas funções pré-definidas (z e s), e três trapezoides:
+</p>
+
+```
+(deftemplate producao
+0 500 qtd_produzida
+  (
+    (muito-baixa (z 0 110))
+    (baixa (90 0)(110 1)(190 1)(210 0))
+    (media (190 0)(210 1)(290 1)(310 0))
+    (alta (290 0)(310 1)(390 1)(410 0))
+    (muito-alta (s 390 500))
+  )
+)
+```
+
+
+
+
+
