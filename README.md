@@ -44,7 +44,7 @@ Lucas Cordeiro de Souza e Mauricio Demonti Amorim
     <tr>
       <th>MÉDIA</th>
       <td>Alto</td>
-      <td>Média</td>
+      <td>Médio</td>
       <td>Baixo</td>
     </tr>
         <tr>
