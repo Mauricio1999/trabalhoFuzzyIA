@@ -1,5 +1,5 @@
 <h2 align="justify">
-# Implementação de um Sistema Especialista Fuzzy para Calcular Ganho de um Funcionário por Produção e Tempo na Fabricação de Peças Eletrônicas 
+Implementação de um Sistema Especialista Fuzzy para Calcular Ganho de um Funcionário por Produção e Tempo na Fabricação de Peças Eletrônicas 
 </h2>
 <h3>
 Lucas Cordeiro de Souza e Mauricio Demonti Amorim
@@ -9,7 +9,7 @@ Lucas Cordeiro de Souza e Mauricio Demonti Amorim
 </h4>
 
 <p align="justify">
-    Neste relatório será apresentado o detalhamento de implementação de um Sistema Especialista Fuzzy utilizando a ferramenta FuzzyClips, com a finalidade de calcular o ganho(R$) diário de um funcionário fabricante de peças eletrônicas, considerando como variáveis auxiliares o tempo estimado e a quantidade produzida. 
+    Neste relatório será apresentado o detalhamento de implementação de um Sistema Especialista Fuzzy utilizando a ferramenta FuzzyClips, com a finalidade de calcular o ganho (em reais) diário de um funcionário fabricante de peças eletrônicas, considerando como variáveis auxiliares o tempo estimado e a quantidade produzida. 
 </p>
 
 <table align="center">
@@ -58,3 +58,6 @@ Lucas Cordeiro de Souza e Mauricio Demonti Amorim
     </tr>
   </tbody>
 </table>
+<h6>
+Tabela 1. Variáveis linguísticas para calcular o ganho diário de monetização.
+</h6>
