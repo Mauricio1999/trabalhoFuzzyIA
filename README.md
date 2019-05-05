@@ -200,15 +200,22 @@ Deffacts - 1
 ```
 A figura 4 ilustra o resultado obtido a partir dos fatos citados acima.
 ![Imagem 4](https://github.com/Mauricio1999/trabalhoFuzzyIA/blob/master/img/muito-alta%20pouco.jpg "muito alta/pouco tempo")
-<h6 align="justify">Figura 4. Plotagem do resultado dos fatos apresentados acima (Deffacts - 1).
-    Ganho de uma produção muito alta em pouco tempo.</h6>
+<h6 align="justify">Figura 4. Plotagem do Deffacts – 1. Ganho de uma produção muito alta em pouco tempo.</h6>
 
+Deffacts - 2
 
+```
+(deffacts producao/tempo
+  (producao muito-baixa)
+  (tempo muito)
+)
+```
+![Imagem 5](https://github.com/Mauricio1999/trabalhoFuzzyIA/blob/master/img/muito-baixa%20muito.jpg "muito baixa/muito tempo")
+<h6 align="justify">Figura 5. Plotagem do Deffacts – 2. Ganho de uma produção muito baixa em muito tempo.</h6>
 
+<h4>3. Conclusão</h4>
 
-
-
-
-
-
-
+<p align="justify">
+   Nos testes apresentados verificamos que implementação de um Sistema Especialista Fuzzy em empresa pode ser muito importante. Com regras e templates bem detalhados podemos ter uma ferramenta capaz de emitir diagnósticos precisos sobre a situação operativa. Como vimos, o sistema trabalha com grandes variedades de entradas, vagas e incertas, as quais podem ser traduzidas para valores reais, onde resulta no valor mais preciso possível. 
+	Um sistema como esse poderia ser muito bem aplicado em qualquer área de produção ou até mesmo adaptado para outros fatores do cotidiano.
+</p>
