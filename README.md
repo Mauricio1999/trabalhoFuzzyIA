@@ -76,9 +76,15 @@ Tabela 1. Variáveis linguísticas para calcular o ganho diário de monetizaçã
 ```
 (deftemplate tempo
 0 8 tempo_producao_horas
-  (    (pouco (z 0 4))
+  ((pouco (z 0 4))
     (medio (2 0)(4 1)(6 0))
     (muito (s 5 8))
   )
 )
 ```
+
+<p align="justify">
+    A figura 1 ilustra um gráfico com os valores numéricos possíveis para o tempo de trabalho considerando as variáveis linguísticas definidas na Tabela 1 e no template citado.
+</p>
+
+![Imagem 1](https://github.com/Mauricio1999/trabalhoFuzzyIA/blob/master/img/plot%20tempo.jpg)
